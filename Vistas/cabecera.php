@@ -53,13 +53,57 @@
                 }
             ],
         });
-            
+
+        $("#registrar").click(function(){
+            $("#dialog2").dialog("open");
         });
+        $("#dialog2").dialog({
+            autoOpen: false,
+            width: 400,
+            buttons: [
+                {
+                    text: "Ok",
+                    click: function() {
+                    str=$("#frm_login").serialize();
+                    $.post('index/login',str, function(data) {
+                    console.log(data);
+                   });
+                        $(this).dialog("close");
+                    }
+                },
+                {
+                    text: "Cancel",
+                    click: function() {
+                        $(this).dialog("close");
+                    }
+                }
+            ],
+        });
+            
+    });
+
     
     </script>
 </head>
 <body>
     <div id="dialog" title="Identificarse">
+    <form id="frm_login">
+        <table>
+            <tr>
+                <td>usuario</td>
+                <td><input type="text" name="usuario" id="usuario"></td>
+            </tr>
+            <tr>
+                <td>contrasena</td>
+                <td><input type="text" name="contrasena" id="contrasena"</td>
+            </tr>
+            <tr>
+                <td colspan="2"><div id="error_login"></div>                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div id="dialog2" title="Registrarse">
     <form id="frm_login">
         <table>
             <tr>
@@ -91,6 +135,6 @@
             </div>
             <div id="botones1" class="alinear">
             	<a href="#" id="ref_login" class="inicio">Ingresar</a>&nbsp;|
-              <a href="#" class="inicio">Registrate</a>
+              <a href="#" id="registrar" class="inicio">Registrate</a>
             </div>
         </div>
