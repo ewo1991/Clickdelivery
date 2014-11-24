@@ -120,6 +120,11 @@
                 <td><input type="text" name="nombre" id="nombre"</td>
             </tr>
             <tr>
+            <tr>
+                <td>Apellidos</td>
+                <td><input type="text" name="apellidos" id="apellidos"</td>
+            </tr>
+            <tr>
                 <td>Email</td>
                 <td><input type="text" name="email" id="email"</td>
             </tr>
