@@ -90,11 +90,11 @@
     <form id="frm_login">
         <table>
             <tr>
-                <td>usuario</td>
+                <td>Usuario</td>
                 <td><input type="text" name="usuario" id="usuario"></td>
             </tr>
             <tr>
-                <td>contrasena</td>
+                <td>Contrasena</td>
                 <td><input type="text" name="contrasena" id="contrasena"</td>
             </tr>
             <tr>
@@ -107,12 +107,29 @@
     <form id="frm_login">
         <table>
             <tr>
-                <td>usuario</td>
-                <td><input type="text" name="usuario" id="usuario"></td>
+                <td>Como</td>
+                <td>
+                <select>
+                    <option value="cliente">Cliente</option>
+                    <option value="empresa">Empresa</option>
+                </select>
+                </td>
             </tr>
             <tr>
-                <td>contrasena</td>
-                <td><input type="text" name="contrasena" id="contrasena"</td>
+                <td>Nombre</td>
+                <td><input type="text" name="nombre" id="nombre"</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="email" id="email"</td>
+            </tr>
+            <tr>
+                <td>Contrasena</td>
+                <td><input type="password" name="contrasena" id="contrasena"</td>
+            </tr>
+            <tr>
+                <td>Confirmar Contrasena</td>
+                <td><input type="password" name="confirmar" id="confirmar"</td>
             </tr>
             <tr>
                 <td colspan="2"><div id="error_login"></div>                </td>
