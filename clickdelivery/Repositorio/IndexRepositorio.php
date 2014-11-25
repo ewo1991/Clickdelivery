@@ -21,4 +21,11 @@ class IndexRepositorio {
         $usuario->idTipoUsuario=$tiu;
         $usuario->save();
     }
+
+    public function verificar()
+    {
+        $datos = Capsule::table('usuario')->get();
+        return $datos;
+
+    }
 }

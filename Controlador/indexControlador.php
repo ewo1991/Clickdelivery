@@ -22,4 +22,10 @@ class indexControlador extends Controlador
         $this->indxRepo->guardar($_REQUEST['user'],$_REQUEST['pass'],$_REQUEST['nombre'],$_REQUEST['apellidos'],$_REQUEST['email'],$_REQUEST['tipocliente']);
     }
 
+    public function login (){
+        $this->indxRepo = new IndexRepositorio();
+        $data=$this->indxRepo->verificar($_REQUEST['usuario'],$_REQUEST['contrasena']);
+        print_r($data);exit;
+    }
+
 } 

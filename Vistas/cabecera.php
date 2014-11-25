@@ -137,71 +137,71 @@
 </head>
 <body>
     <div id="dialog" title="Identificarse">
-    <form id="frm_login">
-        <table>
-            <tr>
-                <td>Usuario</td>
-                <td><input type="text" name="usuario" id="usuario"></td>
-            </tr>
-            <tr>
-                <td>Contrasena</td>
-                <td><input type="text" name="contrasena" id="contrasena"</td>
-            </tr>
-            <tr>
-                <td colspan="2"><div id="error_login"></div>                </td>
-            </tr>
-        </table>
-    </form>
-</div>
-<div id="dialog2" title="Registrarse">
-    <form id="frm_registro">
-        <table>
-            <tr>
-                <td>Como</td>
-                <td>
-                    <select name="tipocliente">
-                    <option value="1">Cliente</option>
-                    <option value="2">Empresa</option>
-                </select>
-                </td>
-            </tr>
-            <tr>
-                <td>User Name</td>
-                <td><input type="text" name="user" id="user"</td>
-                <div id="mensaje1" class="mensaje">dato nesesario</div>
-            </tr>
-            <tr>
-                <td>Nombre</td>
-                <td><input type="text" name="nombre" id="nombre"</td>
-                <div id="mensaje2" class="mensaje">dato nesesario</div>
-            </tr>
-            <tr>
-            <tr>
-                <td>Apellidos</td>
-                <td><input type="text" name="apellidos" id="apellidos"</td>
-                <div id="mensaje3" class="mensaje">dato nesesario</div>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td><input type="text" name="email" id="email"</td>
-                <div id="mensaje4" class="mensaje">dato nesesario</div>
-            </tr>
-            <tr>
-                <td>Contrasena</td>
-                <td><input type="password" name="pass" id="pass"</td>
-                <div id="mensaje5" class="mensaje">dato nesesario</div>
-            </tr>
-            <tr>
-                <td>Confirmar Contrasena</td>
-                <td><input type="password" name="confirmar" id="confirmar"</td>
-                <div id="mensaje6" class="mensaje">dato nesesario</div>
-            </tr>
-            <tr>
-                <td colspan="2"><div id="error_login"></div>                </td>
-            </tr>
-        </table>
-    </form>
-</div>
+        <form id="frm_login">
+            <table>
+                <tr>
+                    <td>Usuario</td>
+                    <td><input type="text" name="usuario" id="usuario"></td>
+                </tr>
+                <tr>
+                    <td>Contrasena</td>
+                    <td><input type="password" name="contrasena" id="contrasena"</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><div id="error_login"></div>                </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div id="dialog2" title="Registrarse">
+        <form id="frm_registro">
+            <table>
+                <tr>
+                    <td>Como</td>
+                    <td>
+                        <select name="tipocliente">
+                        <option value="1">Cliente</option>
+                        <option value="2">Empresa</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>User Name</td>
+                    <td><input type="text" name="user" id="user"</td>
+                    <div id="mensaje1" class="mensaje">dato nesesario</div>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td><input type="text" name="nombre" id="nombre"</td>
+                    <div id="mensaje2" class="mensaje">dato nesesario</div>
+                </tr>
+                <tr>
+                <tr>
+                    <td>Apellidos</td>
+                    <td><input type="text" name="apellidos" id="apellidos"</td>
+                    <div id="mensaje3" class="mensaje">dato nesesario</div>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="text" name="email" id="email"</td>
+                    <div id="mensaje4" class="mensaje">dato nesesario</div>
+                </tr>
+                <tr>
+                    <td>Contrasena</td>
+                    <td><input type="password" name="pass" id="pass"</td>
+                    <div id="mensaje5" class="mensaje">dato nesesario</div>
+                </tr>
+                <tr>
+                    <td>Confirmar Contrasena</td>
+                    <td><input type="password" name="confirmar" id="confirmar"</td>
+                    <div id="mensaje6" class="mensaje">dato nesesario</div>
+                </tr>
+                <tr>
+                    <td colspan="2"><div id="error_login"></div>                </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 <div id="cabecera" align="center">
         	<div id="mensaje"><h1>El delivery de los mejores restaurantes de la ciudad</h1></div>
           	<div id="imagen" class="alinear" ></div>
