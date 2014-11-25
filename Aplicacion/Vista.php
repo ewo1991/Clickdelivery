@@ -40,6 +40,18 @@ class Vista
             throw new Exception('Error de vista no encontrada');
         }
     }
+    
+    public function rendePartial($vista, $item = false)
+    {
+
+        $ruta = ROOT . 'Vistas' . DS . $this->_controlador . DS . $vista . '.php';
+
+        if (is_readable($ruta)) {
+            include_once $ruta;
+        } else {
+            throw new Exception('Error de vista no encontrada');
+        }
+    }
 
     public function setJs(array $js) {
         if (is_array($js) && count($js)) {

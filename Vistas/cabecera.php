@@ -7,6 +7,7 @@
     <script type="text/javascript" src="<?php echo BASE_URL;?>js/jquery-ui.min.js"></script> 
     <link type="text/css" href="<?php echo BASE_URL;?>css/jquery-ui.min.css" rel="stylesheet" />
     <link rel="shortcut icon" href="<?php echo BASE_URL?>lib/img/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="<?php echo BASE_URL;?>js/botones_index.js"></script>
     <title>MVC</title>
 
     <!-- cargamos los css -->
@@ -210,10 +211,10 @@
             <div id="cepardor"  class="alinear">
             <div id="botones" class="alinear">
                 
-                <a href="#" class="boton">Inicio</a>
-                <a  href="#" class="boton">Nosotros</a >
-                <a href="#" class="boton">Contactenos</a>
-                <a href="#" class="boton">Blog</a>
+                <a href="#" class="boton" id="inicio">Inicio</a>
+                <a  href="#" class="boton" id="nosotros">Nosotros</a >
+                <a href="#" class="boton" id="contactenos">Contactenos</a>
+                <a href="#" class="boton" id="blog">Blog</a>
                 
             </div>
             </div>

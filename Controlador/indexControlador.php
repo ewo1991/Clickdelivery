@@ -31,5 +31,9 @@ class indexControlador extends Controlador
             echo 'incorrecto';
         }
     }
+    
+    public function nosotros(){
+        $this->_vista->rendePartial('nosotros');
+    }
 
 } 
