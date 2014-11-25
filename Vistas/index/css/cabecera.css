@@ -1,16 +1,17 @@
 #cabecera{background-image: url('../image/fondo.jpg');
-						height:90px}
-			a{text-decoration:none}
-			#mensaje{color:#FFFFFF}
-			
-			#botones{background-color:#CCFFCC;
-					padding:5px 0px 5px 0px}
-			.boton{padding:5px 10px 5px 10px}
-			.boton:hover{background-color:#66CC00;
-						color:#660033}
-                        .boton{ padding-top: 5px;}
-
-			.alinear{display:inline}
-			#cepardor{padding:10px 450px 0px 450px}
-			#botones1{color:#FFFFFF}
-			.inicio{color:#FFFFFF}
+		height:90px}
+a{text-decoration:none}
+#mensaje{color:#FFFFFF}
+#botones{background-color:#CCFFCC;
+		padding:5px 0px 5px 0px}
+.boton{padding:5px 10px 5px 10px}
+.boton:hover{background-color:#66CC00;
+			color:#660033}
+.boton{ padding-top: 5px;}
+.alinear{display:inline}
+#cepardor{padding:10px 450px 0px 450px}
+#botones1{color:#FFFFFF}
+.inicio{color:#FFFFFF}
+.mensaje{display: none;
+		background:red;
+		position: absolute;}

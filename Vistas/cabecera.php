@@ -27,6 +27,7 @@
         <?php endfor; ?>
     <?php endif; ?>
             <script>
+            var expr=/^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9_\-]+\.[a-zA-Z0-9_\-\.]+$/;
     $(function() {
         $("#ref_login").click(function(){
             $("#dialog").dialog("open");
@@ -64,10 +65,50 @@
                 {
                     text: "Ok",
                     click: function() {
+                        var user=$("#user").val();
+                        var nombre=$("#nombre").val();
+                        var apellido=$("#apellidos").val();
+                        var email=$("#email").val();
+                        var pasw=$("#pass").val()
+                        var confi=$("#confirmar").val()
+                        if(user==""){
+                            $("#mensaje1").fadeIn();
+                            return false;
+                        }else{
+                            $("#mensaje1").fadeOut();
+                            if(nombre==""){
+                                $("#mensaje2").fadeIn();
+                                return false;
+                            }else{
+                                $("#mensaje2").fadeOut();
+                                if(apellido==""){
+                                   $("#mensaje3").fadeIn();
+                                    return false; 
+                                }else{
+                                    $("#mensaje3").fadeOut();
+                                    if(email=="" || !expr.test(email)){
+                                        $("#mensaje4").fadeIn();
+                                        return false; 
+                                    }else{
+                                        $("#mensaje4").fadeOut();
+                                        if(pasw==""){
+                                            $("#mensaje5").fadeIn();
+                                            return false; 
+                                        }else{
+                                            $("#mensaje5").fadeOut();
+                                            if(confi==""){
+                                                $("#mensaje6").fadeIn();
+                                                return false; 
+                                            }else{
+                                                $("#mensaje6").fadeOut();
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                         con1=$('#pass').val();
-                        alert(con1);
                         con2=$('#confirmar').val();
-                        alert(con2);
                         if(con1==con2){
                     str=$("#frm_registro").serialize();
                     $.post('index/registro',str, function(data) {
@@ -76,7 +117,7 @@
                         $(this).dialog("close");
                         alert('datos guardados correctamente XD');
                     }else{
-                        alert('verifique sus datos');
+                        alert('las contraseñas no son iguales');
                     }
                     }
                 },
@@ -127,27 +168,33 @@
             <tr>
                 <td>User Name</td>
                 <td><input type="text" name="user" id="user"</td>
+                <div id="mensaje1" class="mensaje">dato nesesario</div>
             </tr>
             <tr>
                 <td>Nombre</td>
                 <td><input type="text" name="nombre" id="nombre"</td>
+                <div id="mensaje2" class="mensaje">dato nesesario</div>
             </tr>
             <tr>
             <tr>
                 <td>Apellidos</td>
                 <td><input type="text" name="apellidos" id="apellidos"</td>
+                <div id="mensaje3" class="mensaje">dato nesesario</div>
             </tr>
             <tr>
                 <td>Email</td>
                 <td><input type="text" name="email" id="email"</td>
+                <div id="mensaje4" class="mensaje">dato nesesario</div>
             </tr>
             <tr>
                 <td>Contrasena</td>
                 <td><input type="password" name="pass" id="pass"</td>
+                <div id="mensaje5" class="mensaje">dato nesesario</div>
             </tr>
             <tr>
                 <td>Confirmar Contrasena</td>
                 <td><input type="password" name="confirmar" id="confirmar"</td>
+                <div id="mensaje6" class="mensaje">dato nesesario</div>
             </tr>
             <tr>
                 <td colspan="2"><div id="error_login"></div>                </td>
