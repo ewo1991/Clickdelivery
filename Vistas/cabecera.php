@@ -64,11 +64,20 @@
                 {
                     text: "Ok",
                     click: function() {
-                    str=$("#frm_login").serialize();
-                    $.post('index/login',str, function(data) {
+                        con1=$('#pass').val();
+                        alert(con1);
+                        con2=$('#confirmar').val();
+                        alert(con2);
+                        if(con1==con2){
+                    str=$("#frm_registro").serialize();
+                    $.post('index/registro',str, function(data) {
                     console.log(data);
                    });
                         $(this).dialog("close");
+                        alert('datos guardados correctamente XD');
+                    }else{
+                        alert('verifique sus datos');
+                    }
                     }
                 },
                 {
@@ -104,16 +113,20 @@
     </form>
 </div>
 <div id="dialog2" title="Registrarse">
-    <form id="frm_login">
+    <form id="frm_registro">
         <table>
             <tr>
                 <td>Como</td>
                 <td>
-                <select>
-                    <option value="cliente">Cliente</option>
-                    <option value="empresa">Empresa</option>
+                    <select name="tipocliente">
+                    <option value="1">Cliente</option>
+                    <option value="2">Empresa</option>
                 </select>
                 </td>
+            </tr>
+            <tr>
+                <td>User Name</td>
+                <td><input type="text" name="user" id="user"</td>
             </tr>
             <tr>
                 <td>Nombre</td>
@@ -130,7 +143,7 @@
             </tr>
             <tr>
                 <td>Contrasena</td>
-                <td><input type="password" name="contrasena" id="contrasena"</td>
+                <td><input type="password" name="pass" id="pass"</td>
             </tr>
             <tr>
                 <td>Confirmar Contrasena</td>
