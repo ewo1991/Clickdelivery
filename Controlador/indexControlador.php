@@ -24,8 +24,12 @@ class indexControlador extends Controlador
 
     public function login (){
         $this->indxRepo = new IndexRepositorio();
-        $data=$this->indxRepo->verificar($_REQUEST['usuario'],$_REQUEST['contrasena']);
-        print_r($data);exit;
+        $data=$this->indxRepo->verificar($_REQUEST['usuario']);
+        if($data[0]['pass']==$_REQUEST['contrasena']){
+            echo 'correcto';
+        }else{
+            echo 'incorrecto';
+        }
     }
 
 } 

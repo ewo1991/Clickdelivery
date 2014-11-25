@@ -22,9 +22,9 @@ class IndexRepositorio {
         $usuario->save();
     }
 
-    public function verificar()
+    public function verificar($user)
     {
-        $datos = Capsule::table('usuario')->get();
+        $datos = Capsule::table('usuario')->where('usuario','=',$user)->get();
         return $datos;
 
     }

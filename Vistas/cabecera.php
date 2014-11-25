@@ -39,11 +39,13 @@
                 {
                     text: "Ok",
                     click: function() {
-                    str=$("#frm_login").serialize();
-                    $.post('index/login',str, function(data) {
-                    console.log(data);
-                   });
-                        $(this).dialog("close");
+                        str=$("#frm_login").serialize();
+                        $.post('index/login',str, function(data) {
+                            if(data!='correcto'){
+                            $("#error_login").html('datos incorrectos');
+                            }
+                        });
+                        
                     }
                 },
                 {
