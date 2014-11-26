@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="<?php echo BASE_URL?>lib/img/favicon.ico" type="image/x-icon" />
     <script type="text/javascript" src="<?php echo BASE_URL;?>js/botones_index.js"></script>
     <title>MVC</title>
-
+<script> var base_url = <?php echo BASE_URL ?> </script>
     <!-- cargamos los css -->
     <?php if(isset($_params['css']) && count($_params['css'])): ?>
         <?php for($i=0; $i < count($_params['css']); $i++): ?>
@@ -101,7 +101,7 @@
     </div>
 <div id="cabecera" align="center">
         	<div id="mensaje"><h1>El delivery de los mejores restaurantes de la ciudad</h1></div>
-          	<div id="imagen" class="alinear" ></div>
+                <div id="imagen" class="alinear"></div>
             <div id="cepardor"  class="alinear">
             <div id="botones" class="alinear">
                 
@@ -113,7 +113,14 @@
             </div>
             </div>
             <div id="botones1" class="alinear">
+                
+                <?php 
+                if(!empty($_SESSION['idUsuario'])){
+                echo 'USUARIO: '.$_SESSION['usuario'];
+                echo ' | <a href="#" id="serar" style="color:#ffffff">Salir</a>';
+                }else{?>
             	<a href="#" id="ref_login" class="inicio">Ingresar</a>&nbsp;|
               <a href="#" id="registrar" class="inicio">Registrate</a>
+                <?php }?>
             </div>
         </div>

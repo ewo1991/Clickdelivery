@@ -104,5 +104,11 @@
                 }
             ],
         });
+        
+        $('#serar').click(function(){
+            $.post(base_url+'index/cerrar','nada', function(data) {
+                window.location=base_url;
+            });
+        });
             
     });

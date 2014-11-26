@@ -25,8 +25,18 @@ class indexControlador extends Controlador
         $this->indxRepo = new IndexRepositorio();
         $data=$this->indxRepo->verificar($_REQUEST['usuario']);
         if($data[0]['pass']==$_REQUEST['contrasena']){
-            if($data[0]['idTipoUsuario']==1)
-                echo 'correcto';
+            session_start();
+            $_SESSION['idUsuario']=$data[0]['idUsuario'];
+            $_SESSION['usuario']=$data[0]['usuario'];
+            $_SESSION['pass']=$data[0]['pass'];
+            $_SESSION['nombre']=$data[0]['nombre'];
+            $_SESSION['apellido']=$data[0]['apellido'];
+            $_SESSION['email']=$data[0]['email'];
+            $_SESSION['direccion']=$data[0]['direccion'];
+            $_SESSION['telefono']=$data[0]['telefono'];
+            $_SESSION['nombre_empresa']=$data[0]['nombre_empresa'];
+            $_SESSION['idTipoUsuario']=$data[0]['idTipoUsuario'];
+            echo 'correcto';           
         }else{
             echo 'incorrecto';
         }
@@ -34,6 +44,11 @@ class indexControlador extends Controlador
     
     public function nosotros(){
         $this->_vista->rendePartial('nosotros');
+    }
+    
+    public function cerrar(){
+        session_start();
+        session_destroy();
     }
 
 } 
