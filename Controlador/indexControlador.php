@@ -11,8 +11,7 @@ class indexControlador extends Controlador
     //metodo para llamar al controller index
     public function index()
     {
-        $this->_vista->setJs(array('funcion'));
-        $this->_vista->setCss(array('cabecera','cuerpoIndex','pie'));
+        $this->_vista->setCss(array('cuerpoIndex'));
         $this->_vista->titulo = 'Portada de index';
         $this->_vista->renderizar('index');
     }
@@ -26,7 +25,8 @@ class indexControlador extends Controlador
         $this->indxRepo = new IndexRepositorio();
         $data=$this->indxRepo->verificar($_REQUEST['usuario']);
         if($data[0]['pass']==$_REQUEST['contrasena']){
-            echo 'correcto';
+            if($data[0]['idTipoUsuario']==1)
+                echo 'correcto';
         }else{
             echo 'incorrecto';
         }
