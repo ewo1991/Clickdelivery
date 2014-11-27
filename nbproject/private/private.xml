@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/clickdelivery/Controlador/clienteControlador.php</file>
-            <file>file:/C:/xampp/htdocs/clickdelivery/Controlador/usuariosControlador.php</file>
-            <file>file:/C:/xampp/htdocs/clickdelivery/Controlador/indexControlador.php</file>
-            <file>file:/C:/xampp/htdocs/clickdelivery/Vistas/cabecera.php</file>
+            <file>file:/C:/xampp/htdocs/Clickdelivery/clickdelivery/Repositorio/ClienteRepositorio.php</file>
+            <file>file:/C:/xampp/htdocs/Clickdelivery/Vistas/cliente/mis_datos.php</file>
+            <file>file:/C:/xampp/htdocs/Clickdelivery/Vistas/cliente/js/mis_datos_cliente.js</file>
+            <file>file:/C:/xampp/htdocs/Clickdelivery/clickdelivery/Entidades/Index.php</file>
+            <file>file:/C:/xampp/htdocs/Clickdelivery/Controlador/clienteControlador.php</file>
         </group>
     </open-files>
 </project-private>

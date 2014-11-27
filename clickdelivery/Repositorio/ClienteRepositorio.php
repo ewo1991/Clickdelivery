@@ -1,8 +1,18 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+namespace clickdelivery\Repositorio;
+session_start();
+use Illuminate\Database\Capsule\Manager as Capsule;
+use clickdelivery\Entidades\Index;
+class ClienteRepositorio {
+    
+    public function actuli_cliente($nom,$tef=NULL,$direc=NULL,$email,$pass){
+        $index = Index::find($_SESSION['idUsuario']);
+        $index->nombre = $nom;
+        $index->telefono = $tef;
+        $index->direccion = $direc;
+        $index->email = $email;
+        $index->pass = $pass;
+        $index->save();
+    }
+}
