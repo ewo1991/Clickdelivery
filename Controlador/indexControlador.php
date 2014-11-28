@@ -36,7 +36,7 @@ class indexControlador extends Controlador
             $_SESSION['telefono']=$data[0]['telefono'];
             $_SESSION['nombre_empresa']=$data[0]['nombre_empresa'];
             $_SESSION['idTipoUsuario']=$data[0]['idTipoUsuario'];
-            echo 'correcto';           
+            echo 'correcto-'.$_SESSION['idTipoUsuario'];           
         }else{
             echo 'incorrecto';
         }

@@ -12,10 +12,17 @@
                     click: function() {
                         str=$("#frm_login").serialize();
                         $.post('index/login',str, function(data) {
-                            if(data!='correcto'){
+                            var pedaso=data.split("-");
+                            correc=pedaso[0];
+                            tipou=pedaso[1];
+                            if(correc!='correcto'){
                             $("#error_login").html('datos incorrectos');
                             }else{
-                                window.location='cliente/';
+                                if(tipou=='1'){
+                                    window.location='cliente/';
+                                }else{
+                                    window.location='empresa/';  
+                                }
                             }
                         });
                         

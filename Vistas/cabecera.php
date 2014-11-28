@@ -3,9 +3,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script type="text/javascript" src="<?php echo BASE_URL;?>js/jquery-1.11.1.min.js"></script> 
+    <script type="text/javascript" src="<?php echo BASE_URL;?>js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL;?>js/dataTables.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL;?>js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL;?>js/funcion.js"></script> 
+    <link type="text/css" href="<?php echo BASE_URL;?>css/dataTables.css" rel="stylesheet" />
     <link type="text/css" href="<?php echo BASE_URL;?>css/jquery-ui.min.css" rel="stylesheet" />
     <link type="text/css" href="<?php echo BASE_URL;?>css/cabecera.css" rel="stylesheet" />
     <link type="text/css" href="<?php echo BASE_URL;?>css/pie.css" rel="stylesheet" />
