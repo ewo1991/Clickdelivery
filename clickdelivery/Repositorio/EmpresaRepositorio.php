@@ -4,6 +4,7 @@ namespace clickdelivery\Repositorio;
 session_start();
 use Illuminate\Database\Capsule\Manager as Capsule;
 use clickdelivery\Entidades\Restaurante;
+use clickdelivery\Entidades\Platos;
 class EmpresaRepositorio {
     
     public function gauardar_empresa($nom,$telef,$direc,$logo=null,$tipores=null){
@@ -37,8 +38,25 @@ class EmpresaRepositorio {
         $index->save();
     }
     
-    public function actualizar_plato(){
-        
+    public function actualizar_plato($idpla,$nom,$prci,$desc){
+        $index = Platos::find($idpla);
+        $index->nombre = $nom;
+        $index->precio = $prci;
+        $index->descripcion = $desc;
+        $index->save();
+    }
+    
+    public function eliminar($ideli){
+        $curso = Platos::find($ideli);
+        $curso->delete();
+    }
+    
+    public function guardar_nuevo_plato($nom,$preci,$descrip){
+        $plato=new Plato;
+        $plato->nombre=$nom;
+        $plato->precio=$preci;
+        $plato->descripcion=$descrip;
+        $plato->save();
     }
     
 }

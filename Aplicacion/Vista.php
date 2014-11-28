@@ -43,7 +43,6 @@ class Vista
     
     public function rendePartial($vista, $item = false)
     {
-
         $ruta = ROOT . 'Vistas' . DS . $this->_controlador . DS . $vista . '.php';
 
         if (is_readable($ruta)) {

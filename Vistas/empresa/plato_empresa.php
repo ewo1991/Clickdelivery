@@ -42,6 +42,6 @@
         <br>
                 <div id="boton_nuevo"><center>           
                         <input type="button" name="b_atras" id="b_atras" value="Atras">
-                    <input type="button" name="b_nuevo" id="b_nuevo" value="Nuevo plato">
+                    <input type="button" name="b_nuevo_plato" id="b_nuevo_plato" value="Nuevo plato">
                 </center></div>
     </div></center>

@@ -11,17 +11,26 @@ $(function(){
                 "infoFiltered": "(filtered from _MAX_ total records)"
             }
         }); 
-   $('.actualizar').click(function(){alert('hola');
+   $('.actualizar').click(function(){
        idplato=$(this).attr('idplato');
        nombre_plato=$('#nombre_plato'+idplato).val();
        precio_plato=$('#precio_plato'+idplato).val();
        descripcion_plato=$('#descripcion_plato'+idplato).val();
-       $.post(base_url+'empresa/editar_plato','idplato='+idplato+'&nom_plato='+nombre_plato+'&precio_plato='+precio_plato+'&descr_plato='+precio_plato,function(data){
+       $.post(base_url+'empresa/pagina_editar_plato','idplato='+idplato+'&nom_plato='+nombre_plato+'&precio_plato='+precio_plato+'&descr_plato='+descripcion_plato,function(data){
            $("#cuerpo_empresa").empty().append(data);
        })
    });
    
    $('.eliminar').click(function(){
-       alert('eliminar');
+       idplatoeli=$(this).attr('idplato');
+       $.post(base_url+'empresa/eliiminar_plato','idplato='+idplatoeli,function(data){
+           $("#cuerpo_empresa").empty().append(data);
+       });
+   });
+   
+   $('#b_nuevo_plato').click(function(){
+       $.post(base_url+'empresa/pagina_nuevo_plato',function(data){
+           $("#cuerpo_empresa").empty().append(data);
+       });
    });
 });

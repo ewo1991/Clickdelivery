@@ -37,6 +37,27 @@ class empresaControlador extends Controlador
     public function editar_plato(){
         $this->empreRepo=new EmpresaRepositorio();
         $this->empreRepo->actualizar_plato($_REQUEST['idplato'],$_REQUEST['nom_plato'],$_REQUEST['precio_plato'],$_REQUEST['descr_plato']);
+        $this->plato_empresa();
+    }
+    
+    public function pagina_editar_plato(){
+        $this->_vista->dato_plato=$_REQUEST;
+        $this->_vista->rendePartial('editar_plato');
+    }
+    
+    public function eliiminar_plato(){
+        $this->empreRepo=new EmpresaRepositorio();
+        $this->empreRepo->eliminar($_REQUEST['idplato']);
+        $this->plato_empresa();
+    }
+    
+    public function pagina_nuevo_plato(){
+        $this->_vista->rendePartial('nuevo_plato_empresa');
+    }
+    
+    public function guardar_nuevo_plato(){
+        $this->empreRepo=new EmpresaRepositorio();
+        $this->empreRepo->guardar_nuevo_plato($_REQUEST['nombre_plato'],$_REQUEST['precio_plato'],$_REQUEST['descripcion_plato']);
     }
 
 } 
