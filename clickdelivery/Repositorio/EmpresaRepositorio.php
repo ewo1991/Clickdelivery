@@ -19,8 +19,8 @@ class EmpresaRepositorio {
     }
     
     public function select_plato(){
-        $datos = Capsule::table('platos')->where('idRestaurante','=',$restauran)->get();
-        print_r($datos);exit;
+        $idrest= Capsule::table('restaurante')->where('idUsuario','=',$_SESSION['idUsuario'])->get();
+        $datos = Capsule::table('platos')->where('idRestaurante','=',$idrest[0]['idRestaurante'])->get();
         return $datos;
     }
     

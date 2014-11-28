@@ -7,6 +7,7 @@
     <table id="plato_em" class="display" cellspacing="0" width="100%">
             <thead>
                 <tr>
+                    <th>id plato</th>
                     <th>Nombre Plato</th>
                     <th>Pecio</th>
                     <th>Descripcion</th>
@@ -17,6 +18,7 @@
 
             <tfoot>
                 <tr>
+                    <th>id plato</th>
                     <th>Nombre Plato</th>
                     <th>Pecio</th>
                     <th>Descripcion</th>
@@ -25,14 +27,16 @@
                 </tr>
             </tfoot>
             <tbody>
-                <tr>
-                        <td>ertwe</td>
-                        <td>wertwe</td>
-                        <td>ertwer</td>
-                        <td>ewrtwe</td>
-                        <td>ert</td>
-                        
+                <?php foreach ($this->platos as $key=>$value){ ?>
+                    <tr>
+                        <td><?php echo $value['idPlato'] ?></td>
+                        <td><?php echo $value['nombre'] ?></td>
+                        <td><?php echo $value['precio'] ?></td>
+                        <td><?php echo $value['descripcion'] ?></td>
+                        <td><div class="actualizar ui-icon ui-icon-circle-check" idplato="<?php echo $value['idPlato'] ?>"></div></td>
+                        <td><div class="eliminar ui-icon ui-icon-trash" idplato="<?php echo $value['idPlato'] ?>"></div></td>
                     </tr>
+                <?php } ?>
             </tbody>
         </table>
     </div></center>

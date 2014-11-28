@@ -11,4 +11,12 @@ $(function(){
                 "infoFiltered": "(filtered from _MAX_ total records)"
             }
         }); 
+   $('.actualizar').click(function(){alert('hola');
+       idplato=$(this).attr('idplato');
+       alert(idplato);
+   });
+   
+   $('.eliminar').click(function(){
+       alert('eliminar');
+   });
 });

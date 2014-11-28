@@ -3,11 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/Clickdelivery/Vistas/empresa/js/index_empresa.js</file>
-            <file>file:/C:/xampp/htdocs/Clickdelivery/Vistas/empresa/js/plato_empresa.js</file>
-            <file>file:/C:/xampp/htdocs/Clickdelivery/Vistas/empresa/plato_empresa.php</file>
-            <file>file:/C:/xampp/htdocs/Clickdelivery/clickdelivery/Repositorio/EmpresaRepositorio.php</file>
-            <file>file:/C:/xampp/htdocs/Clickdelivery/Controlador/empresaControlador.php</file>
+            <file>file:/C:/xampp/htdocs/clickdelivery/clickdelivery/Repositorio/EmpresaRepositorio.php</file>
+            <file>file:/C:/xampp/htdocs/clickdelivery/Controlador/empresaControlador.php</file>
+            <file>file:/C:/xampp/htdocs/clickdelivery/Vistas/empresa/js/plato_empresa.js</file>
+            <file>file:/C:/xampp/htdocs/clickdelivery/Vistas/empresa/js/index_empresa.js</file>
+            <file>file:/C:/xampp/htdocs/clickdelivery/Vistas/empresa/plato_empresa.php</file>
         </group>
     </open-files>
 </project-private>
