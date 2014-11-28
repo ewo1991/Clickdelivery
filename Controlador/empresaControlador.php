@@ -33,5 +33,10 @@ class empresaControlador extends Controlador
         $this->_vista->platos=$this->empreRepo->select_plato();
         $this->_vista->rendePartial('plato_empresa');        
     }
+    
+    public function editar_plato(){
+        $this->empreRepo=new EmpresaRepositorio();
+        $this->empreRepo->actualizar_plato($_REQUEST['idplato'],$_REQUEST['nom_plato'],$_REQUEST['precio_plato'],$_REQUEST['descr_plato']);
+    }
 
 } 

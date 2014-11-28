@@ -1,6 +1,6 @@
 $(function(){
    $('#plato_em').DataTable({
-            "paging": false,
+            "paging": true,
             "sPaginationType": "full_numbers",
             "bJQueryUI": true,
             "language": {
@@ -13,7 +13,12 @@ $(function(){
         }); 
    $('.actualizar').click(function(){alert('hola');
        idplato=$(this).attr('idplato');
-       alert(idplato);
+       nombre_plato=$('#nombre_plato'+idplato).val();
+       precio_plato=$('#precio_plato'+idplato).val();
+       descripcion_plato=$('#descripcion_plato'+idplato).val();
+       $.post(base_url+'empresa/editar_plato','idplato='+idplato+'&nom_plato='+nombre_plato+'&precio_plato='+precio_plato+'&descr_plato='+precio_plato,function(data){
+           $("#cuerpo_empresa").empty().append(data);
+       })
    });
    
    $('.eliminar').click(function(){
