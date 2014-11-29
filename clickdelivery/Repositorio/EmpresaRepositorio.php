@@ -52,10 +52,14 @@ class EmpresaRepositorio {
     }
     
     public function guardar_nuevo_plato($nom,$preci,$descrip){
-        $plato=new Plato;
+        $idrestauran=$this->datos_restaurante();
+//        print_r($idrestauran);exit;
+        $plato=new Platos;
         $plato->nombre=$nom;
         $plato->precio=$preci;
         $plato->descripcion=$descrip;
+        $plato->foto=NULL;
+        $plato->idRestaurante=$idrestauran[0]['idRestaurante'];
         $plato->save();
     }
     

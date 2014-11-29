@@ -126,3 +126,4 @@
                 <?php }?>
             </div>
         </div>
+    <div id="botones_inicio">

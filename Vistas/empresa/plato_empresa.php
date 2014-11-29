@@ -16,16 +16,6 @@
                 </tr>
             </thead>
 
-            <tfoot>
-                <tr>
-                    <th>id plato</th>
-                    <th>Nombre Plato</th>
-                    <th>Pecio</th>
-                    <th>Descripcion</th>
-                    <th>Editar</th>
-                    <th>Eliminar</th>
-                </tr>
-            </tfoot>
             <tbody>
                 <?php foreach ($this->platos as $key=>$value){ ?>
                     <tr>

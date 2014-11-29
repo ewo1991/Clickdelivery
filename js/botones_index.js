@@ -1,7 +1,7 @@
 $(function(){
    $("#nosotros").click(function(){
-       $.post('index/nosotros','nada', function(data) {
-            $("#cuerpo").empty().append(data);
+       $.post(base_url+'index/nosotros',function(data) {
+            $("#botones_inicio").empty().append(data);
         });
    });
 });

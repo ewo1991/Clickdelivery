@@ -58,6 +58,7 @@ class empresaControlador extends Controlador
     public function guardar_nuevo_plato(){
         $this->empreRepo=new EmpresaRepositorio();
         $this->empreRepo->guardar_nuevo_plato($_REQUEST['nombre_plato'],$_REQUEST['precio_plato'],$_REQUEST['descripcion_plato']);
+        $this->plato_empresa();
     }
 
 } 

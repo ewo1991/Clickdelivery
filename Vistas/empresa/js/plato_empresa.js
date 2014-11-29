@@ -33,4 +33,7 @@ $(function(){
            $("#cuerpo_empresa").empty().append(data);
        });
    });
+   $('#b_atras').click(function(){
+        window.location=base_url+'empresa/';
+    });
 });

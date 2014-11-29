@@ -3,14 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/clickdelivery/clickdelivery/Repositorio/EmpresaRepositorio.php</file>
-            <file>file:/C:/xampp/htdocs/clickdelivery/Vistas/empresa/js/nuevo_plato_empresa.js</file>
-            <file>file:/C:/xampp/htdocs/clickdelivery/Vistas/empresa/js/actualizar_plato.js</file>
-            <file>file:/C:/xampp/htdocs/clickdelivery/Controlador/empresaControlador.php</file>
-            <file>file:/C:/xampp/htdocs/clickdelivery/Vistas/empresa/js/plato_empresa.js</file>
-            <file>file:/C:/xampp/htdocs/clickdelivery/Vistas/empresa/editar_plato.php</file>
-            <file>file:/C:/xampp/htdocs/clickdelivery/Vistas/empresa/nuevo_plato_empresa.php</file>
-            <file>file:/C:/xampp/htdocs/clickdelivery/Vistas/empresa/plato_empresa.php</file>
+            <file>file:/C:/xampp/htdocs/Clickdelivery/Vistas/index/nosotros.php</file>
+            <file>file:/C:/xampp/htdocs/Clickdelivery/js/funcion.js</file>
+            <file>file:/C:/xampp/htdocs/Clickdelivery/Vistas/pie.php</file>
+            <file>file:/C:/xampp/htdocs/Clickdelivery/Vistas/cabecera.php</file>
+            <file>file:/C:/xampp/htdocs/Clickdelivery/js/botones_index.js</file>
+            <file>file:/C:/xampp/htdocs/Clickdelivery/Aplicacion/Vista.php</file>
+            <file>file:/C:/xampp/htdocs/Clickdelivery/Controlador/indexControlador.php</file>
         </group>
     </open-files>
 </project-private>
