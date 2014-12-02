@@ -11,8 +11,9 @@ class indexControlador extends Controlador
     //metodo para llamar al controller index
     public function index()
     {
+        $this->indxRepo = new IndexRepositorio();
         $this->_vista->setCss(array('cuerpoIndex'));
-        $this->_vista->titulo = 'Portada de index';
+        $this->_vista->dato_restaurant = $this->indxRepo->dato_restaurant();
         $this->_vista->renderizar('index');
     }
     

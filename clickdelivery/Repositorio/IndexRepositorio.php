@@ -26,6 +26,11 @@ class IndexRepositorio {
     {
         $datos = Capsule::table('usuario')->where('usuario','=',$user)->get();
         return $datos;
-
     }
+    
+    public function dato_restaurant(){
+        $restaurant = Capsule::table('restaurante')->get();
+        return $restaurant;
+    }
+    
 }
