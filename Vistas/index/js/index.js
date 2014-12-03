@@ -1,5 +1,6 @@
 $(function(){
-   $.post(base_url+'index/datos_restaurant',function(){
-       
+   $('.b_dely').click(function(){
+       idrest=$(this).attr('idrest');
+       window.location=base_url+'delivery/index/idresta='+idrest;
    });
 });
