@@ -4,4 +4,11 @@ $(function(){
             $("#botones_inicio").empty().append(data);
         });
    });
+
+   $("#contactenos").click(function(){
+       $.post(base_url+'index/contactenos',function(data) {
+            $("#botones_inicio").empty().append(data);
+        });
+   });
+
 });

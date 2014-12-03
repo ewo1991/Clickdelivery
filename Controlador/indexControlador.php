@@ -47,6 +47,10 @@ class indexControlador extends Controlador
     public function nosotros(){
         $this->_vista->rendePartial('nosotros');
     }
+
+    public function contactenos(){
+        $this->_vista->rendePartial('contactenos');
+    }
     
     public function cerrar(){
         session_start();
