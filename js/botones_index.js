@@ -10,5 +10,9 @@ $(function(){
             $("#botones_inicio").empty().append(data);
         });
    });
+   
+   $('#inicio').click(function(){
+       window.location=base_url+'index';
+   });
 
 });

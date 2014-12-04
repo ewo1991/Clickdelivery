@@ -12,7 +12,7 @@ class deliveryControlador extends Controlador
     public function index()
     {
         $this->deliveRepo=new DeliveryRepositorio;
-        $this->_vista->setCss(array('cuerpoIndex'));
+        $this->_vista->setCss(array('index'));
         $this->_vista->setJs(array('index'));
         $cadena=  split('=', $_REQUEST['url']);
         $this->_vista->platos= $this->deliveRepo->plato_restaurant($cadena[1]);

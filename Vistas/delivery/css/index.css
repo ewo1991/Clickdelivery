@@ -1,0 +1,18 @@
+.cuerpo_plato{
+    display: inline-block; 
+    }
+    
+#cuerpo_platos{
+    width:60%;
+    background-color: red;
+    border: 2px solid;
+    border-radius: 25px;
+    }
+    
+#carrito_compra_plato{
+    width:39%;
+    float: right;
+    border: 2px solid;
+    border-radius: 25px;
+    background-color: blue;            
+    }
