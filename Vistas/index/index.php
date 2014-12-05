@@ -5,7 +5,6 @@
         <input type="button" name="b_bus_rest" id="b_buscar_rest" value="Buscar">
     </center>
 </div>
-<?php print_r($this->dato_restaurant); ?>
 <?php foreach ($this->dato_restaurant as $key=>$value){ ?>
 <div id="restaurantes">
     <div id="foto_restaurante"></div>

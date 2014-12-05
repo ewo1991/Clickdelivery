@@ -25,7 +25,7 @@ $(function(){
                         $('#totat_final').html(total_final);
                         $('#antes').before(
                             '<tr>\n\
-                                <td>'+nom_plato+'<input type="hidden" name="plato_mombre[]" id="plato_nombre" value="'+nom_plato+'"></td>\n\
+                                <td>'+nom_plato+'<input type="hidden" name="plato_mombre[]" id="plato_nombre" value="'+nom_plato+'"><input type="hidden" name="id_plat[]" id="id_plat" value="'+id_plato+'"></td>\n\
                                 <td>'+prec_plato+'<input type="hidden" name="plato_precio[]" id="plato_precio" value="'+prec_plato+'"></td>\n\
                                 <td>'+canti+'<input type="hidden" name="plato_cantidad[]" id="plato_cantidad" value="'+canti+'"></td>\n\
                                 <td>'+total+'</td>\n\
@@ -49,5 +49,25 @@ $(function(){
         sery_dely=$('#form_carrito').serialize();
         $.post(base_url+'delivery/empesar_envio',sery_dely,function(data){
        })
+       $("#dialog_mensaje").dialog("open");
     });
+    
+    $("#dialog_mensaje").dialog({
+            autoOpen: false,
+            width: 400,
+            buttons: [
+                {
+                    text: "Ok",
+                    click: function() {
+                        window.location=base_url+'index';
+                    }
+                },
+                {
+                    text: "Cancel",
+                    click: function() {
+                        window.location=base_url+'index';
+                    }
+                }
+            ],
+        });
 });

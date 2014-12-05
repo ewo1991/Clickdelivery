@@ -22,7 +22,7 @@ class deliveryControlador extends Controlador
     public function empesar_envio(){
         $this->deliveRepo=new DeliveryRepositorio;
         $this->deliveRepo->guardar_delivery($_REQUEST['idresta']);
-        $this->deliveRepo->guardar_detalle_delivey();
+        $this->deliveRepo->guardar_detalle_delivey($_REQUEST);
     }
 
 

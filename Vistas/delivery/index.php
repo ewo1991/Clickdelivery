@@ -1,7 +1,10 @@
-<div id="dialog_plato" title="cantidad">
+<div id="dialog_plato" title="Cantidad">
         <form id="frm_login">
             <div>cantidad: <input type="text" name="cantidad" id="cantidad"></div>
         </form>
+    </div>
+<div id="dialog_mensaje" title="Mensaje">
+    <span>Espere su Pedido</span>
     </div>
 <div id="cuerpo_platos" class="cuerpo_plato">
     <?php $cont=0; foreach ($this->platos as $key=>$value){ if($cont==0){ ?>
