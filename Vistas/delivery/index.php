@@ -4,7 +4,9 @@
         </form>
     </div>
 <div id="cuerpo_platos" class="cuerpo_plato">
-    <?php foreach ($this->platos as $key=>$value){ ?>
+    <?php $cont=0; foreach ($this->platos as $key=>$value){ if($cont==0){ ?>
+    <input type="hidden" name="idrestaurant" id="idrestaurant" value="<?php echo $value['idRestaurante']?>">
+    <?php } $cont++; ?>
         <div id="plato" class="class_plato">
             <div id="foto_plato"></div>
             <div id="nombre_plato"><?php echo $value['nombre'] ?><input type="hidden" id="nombre_pl<?php echo $value['idPlato'] ?>" value="<?php echo $value['nombre'] ?>"></div>
@@ -17,6 +19,7 @@
 
 <div id="carrito_compra_plato" class="cuerpo_plato">
     <form id="form_carrito">
+        <input type="hidden" name="idresta" id="idresta">
         <table id="tablita" border="1">
             <tr>
                 <td>Nombre plato</td>
@@ -31,4 +34,5 @@
             
         </table>
     </form>
+    <input type="button" id="b_compra_delivery" value="Delivery">
 </div>
