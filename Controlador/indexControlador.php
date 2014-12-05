@@ -13,7 +13,6 @@ class indexControlador extends Controlador
     {
         $this->indxRepo = new IndexRepositorio();
         $this->_vista->setCss(array('cuerpoIndex'));
-        $this->_vista->setJs(array('index'));
         $this->_vista->dato_restaurant = $this->indxRepo->dato_restaurant();
         $this->_vista->renderizar('index');
     }
@@ -55,6 +54,12 @@ class indexControlador extends Controlador
     public function cerrar(){
         session_start();
         session_destroy();
+    }
+    
+    public function busqueda_restaurant(){
+        $this->indxRepo = new IndexRepositorio();
+        $this->_vista->dato_restaurant=$this->indxRepo->busqueda_resturant($_REQUEST['dato']);
+        $this->_vista->rendePartial('index');
     }
 
 } 

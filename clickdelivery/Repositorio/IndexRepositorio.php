@@ -33,4 +33,9 @@ class IndexRepositorio {
         return $restaurant;
     }
     
+    public function busqueda_resturant($dato){
+        $bus_rest = Capsule::table('restaurante')->where('nombre','LIKE',"%$dato%")->get();
+        return $bus_rest;
+    }
+    
 }

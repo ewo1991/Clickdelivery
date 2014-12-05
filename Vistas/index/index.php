@@ -1,3 +1,5 @@
+<script src="/clickdelivery/Vistas/index/js/index.js" type="text/javascript"></script>
+<div id="restau">
 <div>
     <center>
         <span>Busca por el nombre de Restaurante: </span>
@@ -12,3 +14,4 @@
     <div id="boton_delivery"><input type="button" name="b_delivey" id="b_delivey" class="b_dely" idrest="<?php echo $value['idRestaurante']?>" value="HAZ TU DELIVERY"></div>
 </div>
 <?php } ?>
+</div>
