@@ -1,7 +1,12 @@
 <script src="/clickdelivery/Vistas/empresa/js/datos_empresa.js" type="text/javascript"></script>
+    <div id="dialog_empresa" title="Cantidad">
+        <div id="dropzone" class="dropzone">
+            
+        </div>
+    </div>
 <div id="datos_empresa"><h1>Mis datos empresa</h1></div>
 <div id="foto_empresa_subir">
-    
+    <img src="/clickdelivery/uploads/<?php if(!empty($this->dato_rest[0]['logo'])){ echo $this->dato_rest[0]['logo'];} ?>">
 </div>
 <input type="button" id="subir_foto_empresa" name="subir_foto_empresa" value="Subir foto">
 <div id="tabla_actualizar_empresa">
@@ -12,6 +17,7 @@
                 Nombre
             </td>
             <td>
+                <input type="hidden" name="nombre_foto" id="nombre_foto">
                 <input type="hidden" name="idrestaurante" id="idrestaurante" value="<?php if(!empty($this->dato_rest[0]['nombre'])){ echo $this->dato_rest[0]['idRestaurante'];} ?>">
                 <input type="text" name="nombreempresa" id="nombreempresa" value="<?php if(!empty($this->dato_rest[0]['nombre'])){ echo $this->dato_rest[0]['nombre'];} ?>">
             </td>

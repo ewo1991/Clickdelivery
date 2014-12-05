@@ -20,12 +20,12 @@ class empresaControlador extends Controlador
     
     public function guardar_empresa(){
         $this->empreRepo=new EmpresaRepositorio();
-        $this->empreRepo->gauardar_empresa($_REQUEST['nombreempresa'],$_REQUEST['telefono'],$_REQUEST['direccion']);
+        $this->empreRepo->gauardar_empresa($_REQUEST['nombreempresa'],$_REQUEST['telefono'],$_REQUEST['direccion'],$_REQUEST['nombre_foto']);
     }
     
     public function actualiza_empresa(){
         $this->empreRepo=new EmpresaRepositorio();
-        $this->empreRepo->actualizar_empresa($_REQUEST['nombreempresa'],$_REQUEST['telefono'],$_REQUEST['direccion'],$_REQUEST['idrestaurante']);
+        $this->empreRepo->actualizar_empresa($_REQUEST['nombreempresa'],$_REQUEST['telefono'],$_REQUEST['direccion'],$_REQUEST['idrestaurante'],$_REQUEST['nombre_foto']);
     }
     
     public function plato_empresa(){
@@ -36,12 +36,13 @@ class empresaControlador extends Controlador
     
     public function editar_plato(){
         $this->empreRepo=new EmpresaRepositorio();
-        $this->empreRepo->actualizar_plato($_REQUEST['idplato'],$_REQUEST['nom_plato'],$_REQUEST['precio_plato'],$_REQUEST['descr_plato']);
+        $this->empreRepo->actualizar_plato($_REQUEST['idplato'],$_REQUEST['nom_plato'],$_REQUEST['precio_plato'],$_REQUEST['descr_plato'],$_REQUEST['foto_act_plato']);
         $this->plato_empresa();
     }
     
     public function pagina_editar_plato(){
-        $this->_vista->dato_plato=$_REQUEST;
+        $this->empreRepo=new EmpresaRepositorio();
+        $this->_vista->dato_plato=  $this->empreRepo->plato_datos($_REQUEST['idplato']);;
         $this->_vista->rendePartial('editar_plato');
     }
     
@@ -57,8 +58,40 @@ class empresaControlador extends Controlador
     
     public function guardar_nuevo_plato(){
         $this->empreRepo=new EmpresaRepositorio();
-        $this->empreRepo->guardar_nuevo_plato($_REQUEST['nombre_plato'],$_REQUEST['precio_plato'],$_REQUEST['descripcion_plato']);
+        $this->empreRepo->guardar_nuevo_plato($_REQUEST['nombre_plato'],$_REQUEST['precio_plato'],$_REQUEST['descripcion_plato'],$_REQUEST['foto_plato_nuevo']);
         $this->plato_empresa();
+    }
+    
+    public function imagen_empresa(){
+        if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') 
+        {
+	if(isset($_GET["delete"]) && $_GET["delete"] == true)
+	{
+		$name = $_POST["filename"];
+		if(file_exists('./uploads/'.$name))
+		{
+			unlink('./uploads/'.$name);
+			echo json_encode(array("res" => true));
+		}
+		else
+		{
+			echo json_encode(array("res" => false));
+		}
+	}
+	else
+	{
+		$file = $_FILES["file"]["name"];
+		$filetype = $_FILES["file"]["type"];
+		$filesize = $_FILES["file"]["size"];
+
+		if(!is_dir("uploads/"))
+			mkdir("uploads/", 0777);
+
+		if($file && move_uploaded_file($_FILES["file"]["tmp_name"], "uploads/".$file))
+		{
+		}
+	}
+        }
     }
 
 } 

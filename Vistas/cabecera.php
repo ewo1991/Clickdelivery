@@ -13,6 +13,8 @@
     <link type="text/css" href="<?php echo BASE_URL;?>css/pie.css" rel="stylesheet" />
     <link rel="shortcut icon" href="<?php echo BASE_URL?>lib/img/favicon.ico" type="image/x-icon" />
     <script type="text/javascript" src="<?php echo BASE_URL;?>js/botones_index.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL;?>js/dropzone/downloads/dropzone.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>js/dropzone/downloads/css/dropzone.css" />
     <title>MVC</title>
 <script> var base_url = <?php echo BASE_URL ?> </script>
     <!-- cargamos los css -->

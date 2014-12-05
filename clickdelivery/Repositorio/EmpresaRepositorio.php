@@ -30,19 +30,21 @@ class EmpresaRepositorio {
         return $datos_rest;
     }
     
-    public function actualizar_empresa($nom,$tef,$direc,$idrest){
+    public function actualizar_empresa($nom,$tef,$direc,$idrest,$foto=NULL){
         $index = Restaurante::find($idrest);
         $index->nombre = $nom;
         $index->telefono = $tef;
         $index->direccion = $direc;
+        $index->logo=$foto;
         $index->save();
     }
     
-    public function actualizar_plato($idpla,$nom,$prci,$desc){
+    public function actualizar_plato($idpla,$nom,$prci,$desc,$foto=NULL){
         $index = Platos::find($idpla);
         $index->nombre = $nom;
         $index->precio = $prci;
         $index->descripcion = $desc;
+        $index->foto=$foto;
         $index->save();
     }
     
@@ -51,16 +53,22 @@ class EmpresaRepositorio {
         $curso->delete();
     }
     
-    public function guardar_nuevo_plato($nom,$preci,$descrip){
+    public function guardar_nuevo_plato($nom,$preci,$descrip,$foto=NULL){
         $idrestauran=$this->datos_restaurante();
-//        print_r($idrestauran);exit;
+//        print_r($foto);exit;
         $plato=new Platos;
         $plato->nombre=$nom;
         $plato->precio=$preci;
         $plato->descripcion=$descrip;
-        $plato->foto=NULL;
+        $plato->foto=$foto;
         $plato->idRestaurante=$idrestauran[0]['idRestaurante'];
         $plato->save();
+    }
+    
+    public function plato_datos($idplato){
+        $datos = Capsule::table('platos')->where('idPlato','=',$idplato)->get();
+//        print_r($datos);exit;
+        return $datos;
     }
     
 }
