@@ -2,6 +2,7 @@ $(function(){
     var id_plato;
     var nom_plato;
     var prec_plato;
+    var total_final=0;
     $(".b_plato").click(function(){
         id_plato=$(this).attr('idplato');
         nom_plato=$('#nombre_pl'+id_plato).val();
@@ -18,7 +19,9 @@ $(function(){
                     click: function() {
                         canti=$('#cantidad').val();
                         total=canti*prec_plato;
-                        $('#tablita').html(
+                        total_final=total_final+total;
+                        $('#totat_final').html(total_final);
+                        $('#antes').before(
                             '<tr>\n\
                                 <td>'+nom_plato+'</td>\n\
                                 <td>'+prec_plato+'</td>\n\

@@ -17,7 +17,17 @@
 
 <div id="carrito_compra_plato" class="cuerpo_plato">
     <form id="form_carrito">
-        <table id="tablita">
+        <table id="tablita" border="1">
+            <tr>
+                <td>Nombre plato</td>
+                <td>Precio</td>
+                <td>cantidad</td>
+                <td>total</td>
+            </tr>
+            <tr id="antes">
+                <td colspan="3">total</td>
+                <td id="totat_final"></td>
+            </tr>
             
         </table>
     </form>
