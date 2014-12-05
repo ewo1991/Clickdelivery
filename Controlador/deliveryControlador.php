@@ -18,6 +18,12 @@ class deliveryControlador extends Controlador
         $this->_vista->platos= $this->deliveRepo->plato_restaurant($cadena[1]);
         $this->_vista->renderizar('index');
     }
+    
+    public function empesar_envio(){
+        $this->deliveRepo=new DeliveryRepositorio;
+        $this->deliveRepo->guardar_delivery($_REQUEST['idresta']);
+        $this->deliveRepo->guardar_detalle_delivey();
+    }
 
 
 } 

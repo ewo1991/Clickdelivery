@@ -10,4 +10,12 @@ class DeliveryRepositorio {
         return $plato;
     }
     
+    public function guardar_delivery($id_rest){
+        
+    }
+    
+    public function guardar_detalle_delivey(){
+        
+    }
+    
 }
