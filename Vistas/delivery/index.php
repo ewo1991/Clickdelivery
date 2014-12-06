@@ -11,7 +11,7 @@
     <input type="hidden" name="idrestaurant" id="idrestaurant" value="<?php echo $value['idRestaurante']?>">
     <?php } $cont++; ?>
         <div id="plato" class="class_plato">
-            <div id="foto_plato"></div>
+            <div id="foto_plato"><img width="60" height="60" src="/clickdelivery/uploads/<?php echo $value['foto'] ?>"></div>
             <div id="nombre_plato"><?php echo $value['nombre'] ?><input type="hidden" id="nombre_pl<?php echo $value['idPlato'] ?>" value="<?php echo $value['nombre'] ?>"></div>
             <div id="descripcion"><?php echo $value['descripcion'] ?></div>
             <div id="precio"><?php echo $value['precio'] ?><input type="hidden" id="precio_pl<?php echo $value['idPlato'] ?>" value="<?php echo $value['precio'] ?>"></div>

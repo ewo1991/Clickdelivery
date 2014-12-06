@@ -1,9 +1,9 @@
 <div id="cuerpo_empresa">
-	<div id="foto_empresa" clasa="linea">
-
-	</div>
+    <div id="foto_empresa" clasa="linea"><center>
+            <img width="240" height="270" src="/clickdelivery/uploads/<?php echo $this->rest[0]['logo'] ?>">
+        </center></div>
     <div id="tema"><h1>Mi cuenta</h1></div>
-	<div id="mis_datos_empresa" clasa="linea">
+	<div id="mis_datos_empresa" >
             <div id="img_mis_dat_empresa">
                 
             </div>
@@ -11,7 +11,7 @@
             <input type="button" id="b_mis_datos_empresa" name="boton_m_d_e" value="Mis datos">
                 </div></center>
 	</div>
-    <div id="mis_plato_empresa" clasa="linea">
+    <div id="mis_plato_empresa" >
             <div id="img_mis_pedi_empresa">
                 
             </div>

@@ -5,9 +5,9 @@
         </div>
     </div>
 <div id="datos_empresa"><h1>Mis datos empresa</h1></div>
-<div id="foto_empresa_subir">
-    <img src="/clickdelivery/uploads/<?php if(!empty($this->dato_rest[0]['logo'])){ echo $this->dato_rest[0]['logo'];} ?>">
-</div>
+<div id="foto_empresa_subir"><center>
+    <img width="240" height="270" src="/clickdelivery/uploads/<?php if(!empty($this->dato_rest[0]['logo'])){ echo $this->dato_rest[0]['logo'];} ?>">
+    </center></div>
 <input type="button" id="subir_foto_empresa" name="subir_foto_empresa" value="Subir foto">
 <div id="tabla_actualizar_empresa">
     <form id="form_actu_empresa">

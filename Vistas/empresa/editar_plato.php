@@ -6,7 +6,7 @@
     </div>
 <div id="marco de foto">
     <div id="foto_plato">
-        <img src="/clickdelivery/uploads/<?php echo $this->dato_plato[0]['foto'] ?>">
+        <img width="200" height="200" src="/clickdelivery/uploads/<?php echo $this->dato_plato[0]['foto'] ?>">
     </div>
     <div id="boton_foto_plato"><center><input type="button" name="b_subir_foto_plato" id="b_subir_foto_plato" value="Subir foto"></center></div>
 </div>

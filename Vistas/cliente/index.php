@@ -1,7 +1,7 @@
 <div id="cuerpo_cliente">
-	<div id="foto" clasa="linea">
-
-	</div>
+    <div id="foto" clasa="linea"><center>
+            <img width="240" height="270" src="/clickdelivery/uploads/<?php echo $_SESSION['nombre_empresa']  ?>">
+            </center></div>
     <div id="tema"><h1>Mi cuenta</h1></div>
 	<div id="mis_datos" clasa="linea">
             <div id="img_mis_dat_cliente">

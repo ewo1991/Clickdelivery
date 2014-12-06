@@ -8,8 +8,10 @@ class empresaControlador extends Controlador
         parent::__construct();
     }
     public function index() {
+        $this->empreRepo=new EmpresaRepositorio();
         $this->_vista->setJs(array('index_empresa'));
         $this->_vista->setCss(array('index_empresa','datos_empresa','platos_empresa'));
+        $this->_vista->rest=  $this->empreRepo->datos_restaurante();
         $this->_vista->renderizar('index');
     }
     public function datos_empresa(){

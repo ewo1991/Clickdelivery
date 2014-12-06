@@ -3,12 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/clickdelivery/Vistas/empresa/js/datos_empresa.js</file>
-            <file>file:/C:/xampp/htdocs/clickdelivery/Controlador/empresaControlador.php</file>
-            <file>file:/C:/xampp/htdocs/clickdelivery/Vistas/empresa/datos_empresa.php</file>
-            <file>file:/C:/xampp/htdocs/clickdelivery/Vistas/delivery/index.php</file>
-            <file>file:/C:/xampp/htdocs/clickdelivery/Vistas/cabecera.php</file>
-            <file>file:/C:/xampp/htdocs/clickdelivery/Vistas/delivery/js/index.js</file>
+            <file>file:/C:/xampp/htdocs/Clickdelivery/Vistas/cliente/mis_datos.php</file>
+            <file>file:/C:/xampp/htdocs/Clickdelivery/Vistas/delivery/index.php</file>
+            <file>file:/C:/xampp/htdocs/Clickdelivery/Vistas/index/index.php</file>
         </group>
     </open-files>
 </project-private>
