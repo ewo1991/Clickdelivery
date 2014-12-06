@@ -47,6 +47,22 @@ $(function(){
         
     $('#b_compra_delivery').click(function(){
         sery_dely=$('#form_carrito').serialize();
+        if (document.getElementById('map-canvas')){
+ 
+    // Coordinates to center the map
+    var myLatlng = new google.maps.LatLng(-6.487568355931707,-76.3644183021545);
+ 
+    // Other options for the map, pretty much selfexplanatory
+    var mapOptions = {
+        zoom: 14,
+        center: myLatlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+ 
+    // Attach a map to the DOM Element, with the defined settings
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+}
         $.post(base_url+'delivery/empesar_envio',sery_dely,function(data){
        })
        $("#dialog_mensaje").dialog("open");
@@ -54,7 +70,7 @@ $(function(){
     
     $("#dialog_mensaje").dialog({
             autoOpen: false,
-            width: 400,
+            width: 530,
             buttons: [
                 {
                     text: "Ok",

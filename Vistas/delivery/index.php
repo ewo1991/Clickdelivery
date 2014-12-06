@@ -4,8 +4,10 @@
         </form>
     </div>
 <div id="dialog_mensaje" title="Mensaje">
-    <span>Espere su Pedido</span>
+    <div id="map-canvas"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
     </div>
+<div>
 <div id="cuerpo_platos" class="cuerpo_plato">
     <?php $cont=0; foreach ($this->platos as $key=>$value){ if($cont==0){ ?>
     <input type="hidden" name="idrestaurant" id="idrestaurant" value="<?php echo $value['idRestaurante']?>">
@@ -38,4 +40,5 @@
         </table>
     </form>
     <input type="button" id="b_compra_delivery" value="Delivery">
+</div>
 </div>
