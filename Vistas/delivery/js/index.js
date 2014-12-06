@@ -44,7 +44,7 @@ $(function(){
                 }
             ],
         });
-        
+        var marcador=null;
     $('#b_compra_delivery').click(function(){
         sery_dely=$('#form_carrito').serialize();
         if (document.getElementById('map-canvas')){
@@ -61,7 +61,25 @@ $(function(){
  
     // Attach a map to the DOM Element, with the defined settings
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-
+    //Creo un evento asociado a "mapa" cuando se hace "click" sobre el
+        google.maps.event.addListener(map, "click", function(evento) {
+            //Obtengo las coordenadas separadas
+            if(marcador!=null){
+                marcador.setMap(null);
+            }
+            latitud = evento.latLng.lat();
+            longitud = evento.latLng.lng();
+            //Creo un marcador utilizando las coordenadas obtenidas y almacenadas por separado en "latitud" y "longitud"
+            var coordenadas = new google.maps.LatLng(latitud, longitud);
+            $(".latitude").val(latitud);
+            $(".longitude").val(longitud);
+            /* Debo crear un punto geografico utilizando google.maps.LatLng */
+            marcador = new google.maps.Marker({
+                position: coordenadas,
+                map: mapa,
+                animation: google.maps.Animation.DROP,
+                title: "Ubicación de Cliente"});
+        }); //Fin del evento
 }
         $.post(base_url+'delivery/empesar_envio',sery_dely,function(data){
        })
