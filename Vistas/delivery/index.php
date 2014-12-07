@@ -6,6 +6,7 @@
 <div id="dialog_mensaje" title="Mensaje">
     <div id="map-canvas"></div>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
+        <span>Nº de casa :</span><input type="text" name="numero_casa" id="numerp_casa">
     </div>
 <div>
 <div id="cuerpo_platos" class="cuerpo_plato">

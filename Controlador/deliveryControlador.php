@@ -23,6 +23,7 @@ class deliveryControlador extends Controlador
         $this->deliveRepo=new DeliveryRepositorio;
         $this->deliveRepo->guardar_delivery($_REQUEST['idresta']);
         $this->deliveRepo->guardar_detalle_delivey($_REQUEST);
+        $this->deliveRepo->eviar_correo($_REQUEST);
     }
 
 

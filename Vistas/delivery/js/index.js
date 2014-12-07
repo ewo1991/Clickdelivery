@@ -45,8 +45,8 @@ $(function(){
             ],
         });
         var marcador=null;
+        var coordenadas;
     $('#b_compra_delivery').click(function(){
-        sery_dely=$('#form_carrito').serialize();
         if (document.getElementById('map-canvas')){
  
     // Coordinates to center the map
@@ -61,7 +61,9 @@ $(function(){
  
     // Attach a map to the DOM Element, with the defined settings
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-    //Creo un evento asociado a "mapa" cuando se hace "click" sobre el
+}
+//Creo un evento asociado a "mapa" cuando se hace "click" sobre el
+
         google.maps.event.addListener(map, "click", function(evento) {
             //Obtengo las coordenadas separadas
             if(marcador!=null){
@@ -70,19 +72,16 @@ $(function(){
             latitud = evento.latLng.lat();
             longitud = evento.latLng.lng();
             //Creo un marcador utilizando las coordenadas obtenidas y almacenadas por separado en "latitud" y "longitud"
-            var coordenadas = new google.maps.LatLng(latitud, longitud);
+            coordenadas = new google.maps.LatLng(latitud, longitud);
             $(".latitude").val(latitud);
             $(".longitude").val(longitud);
             /* Debo crear un punto geografico utilizando google.maps.LatLng */
             marcador = new google.maps.Marker({
                 position: coordenadas,
-                map: mapa,
+                map: map,
                 animation: google.maps.Animation.DROP,
                 title: "Ubicación de Cliente"});
-        }); //Fin del evento
-}
-        $.post(base_url+'delivery/empesar_envio',sery_dely,function(data){
-       })
+        }); //Fin del evento   
        $("#dialog_mensaje").dialog("open");
     });
     
@@ -93,13 +92,17 @@ $(function(){
                 {
                     text: "Ok",
                     click: function() {
-                        window.location=base_url+'index';
+                        numero_casa=$('#numerp_casa').val();
+                        sery_dely=$('#form_carrito').serialize();
+                        $.post(base_url+'delivery/empesar_envio',sery_dely+'&cordenadas='+coordenadas+'&numero_casa='+numero_casa,function(data){
+       })
+//                        window.location=base_url+'index';
                     }
                 },
                 {
                     text: "Cancel",
                     click: function() {
-                        window.location=base_url+'index';
+//                        window.location=base_url+'index';
                     }
                 }
             ],
