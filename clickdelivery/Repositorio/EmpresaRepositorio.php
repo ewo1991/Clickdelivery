@@ -19,6 +19,24 @@ class EmpresaRepositorio {
         $rest->save();
     }
     
+    public function datos_delive(){
+        $delivery=Capsule::table('delivery')->selectRaw("delivery.idDelivery")
+                ->join('restaurante','delivery.idRestaurante','=','restaurante.idRestaurante')
+                ->join('usuario','restaurante.idUsuario','=','usuario.idUsuario')
+                ->where('usuario.idUsuario','=',$_SESSION['idUsuario'])
+                ->where('delivery.estadodelivery','=','falta')
+                ->get();
+        return $delivery;
+    }
+    
+    public function plato_datos_join($id_delivery){
+        $plato_join=Capsule::table('platos')->selectRaw("platos.idPlato,platos.nombre,platos.precio,detalle_delivery.cantidad,detalle_delivery.direccion")
+                ->join('detalle_delivery','platos.idPlato','=','detalle_delivery.idPlato')
+                ->where('detalle_delivery.idDelivery','=',$id_delivery)
+                ->get();
+        return $plato_join;
+    }
+    
     public function select_plato(){
         $idrest= Capsule::table('restaurante')->where('idUsuario','=',$_SESSION['idUsuario'])->get();
         $datos = Capsule::table('platos')->where('idRestaurante','=',$idrest[0]['idRestaurante'])->get();

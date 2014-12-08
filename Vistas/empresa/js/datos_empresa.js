@@ -11,6 +11,11 @@ $(function(){
             
         });
     });
+    
+    $("#atras").click(function(){
+        window.location=base_url+'empresa/';
+    });
+    
     $("#subir_foto_empresa").click(function(){
         $("#dialog_empresa").dialog("open");
         });

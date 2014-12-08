@@ -10,7 +10,7 @@ class empresaControlador extends Controlador
     public function index() {
         $this->empreRepo=new EmpresaRepositorio();
         $this->_vista->setJs(array('index_empresa'));
-        $this->_vista->setCss(array('index_empresa','datos_empresa','platos_empresa'));
+        $this->_vista->setCss(array('index_empresa','datos_empresa','platos_empresa',"delivery","detalle_delivery"));
         $this->_vista->rest=  $this->empreRepo->datos_restaurante();
         $this->_vista->renderizar('index');
     }
@@ -30,6 +30,19 @@ class empresaControlador extends Controlador
         $this->empreRepo->actualizar_empresa($_REQUEST['nombreempresa'],$_REQUEST['telefono'],$_REQUEST['direccion'],$_REQUEST['idrestaurante'],$_REQUEST['nombre_foto']);
     }
     
+    public function direccion_cliente(){
+        $this->_vista->setJs(array('direccion_empresa'));
+        $this->_vista->setCss(array('direccion_empresa'));
+        $this->_vista->direccion= $_REQUEST['direccion'];
+        $this->_vista->renderizar('direccion_empresa');
+    }
+
+    public function mis_delivery(){
+        $this->empreRepo=new EmpresaRepositorio();
+        $this->_vista->dato_delive=  $this->empreRepo->datos_delive();
+        $this->_vista->rendePartial('delivery');
+    }
+    
     public function plato_empresa(){
         $this->empreRepo=new EmpresaRepositorio();
         $this->_vista->platos=$this->empreRepo->select_plato();
@@ -46,6 +59,12 @@ class empresaControlador extends Controlador
         $this->empreRepo=new EmpresaRepositorio();
         $this->_vista->dato_plato=  $this->empreRepo->plato_datos($_REQUEST['idplato']);;
         $this->_vista->rendePartial('editar_plato');
+    }
+    
+    public function renderpartial_detalle_delivery(){
+        $this->empreRepo=new EmpresaRepositorio();
+        $this->_vista->dato_plato_join=  $this->empreRepo->plato_datos_join($_REQUEST['id_delivery']);
+        $this->_vista->rendePartial('detalle_delivery');
     }
     
     public function eliiminar_plato(){
@@ -88,10 +107,6 @@ class empresaControlador extends Controlador
 
 		if(!is_dir("uploads/"))
 			mkdir("uploads/", 0777);
-
-		if($file && move_uploaded_file($_FILES["file"]["tmp_name"], "uploads/".$file))
-		{
-		}
 	}
         }
     }

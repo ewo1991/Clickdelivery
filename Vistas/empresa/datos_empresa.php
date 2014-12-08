@@ -39,10 +39,11 @@
             </td>
         </tr>
         <tr id="border">
+            <td><center><input type="button" name="atras" id="atras" value="Atras"></center></td>
             <?php if(empty($this->dato_rest[0]['nombre'])){ ?>
-            <td colspan="2"><center><input type="button" name="enviar_act_empresa" id="enviar_act_empresa" value="Guardar"></center></td>
+            <td ><center><input type="button" name="enviar_act_empresa" id="enviar_act_empresa" value="Guardar"></center></td>
             <?php }else{ ?>
-            <td colspan="2"><center><input type="button" name="actualizar_act_empresa" id="actualizar_act_empresa" value="Actualizar"></center></td>
+            <td ><center><input type="button" name="actualizar_act_empresa" id="actualizar_act_empresa" value="Actualizar"></center></td>
             <?php } ?>
         </tr>
     </table>

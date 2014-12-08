@@ -27,7 +27,7 @@
                 <td><input type="text" name="descr_plato" id="descr_plato" value="<?php echo $this->dato_plato[0]['descripcion'] ?>"></td>
             </tr>
             <tr>
-                <td colspan="2"><center><input type="button" name="actualizar_pla" id="actualizar_pla" value="Actualizar plato"></center></td>
+                <td colspan="2"><center><input type="button" name="atras_act_plato" id="atras_act_plato" value="Atras"> <input type="button" name="actualizar_pla" id="actualizar_pla" value="Actualizar plato"></center></td>
             </tr>
         </table>
     </form>

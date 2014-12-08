@@ -24,7 +24,7 @@
             
         </div>
         <center><div>
-            <input type="button" id="b_promocion_empresa" name="boton_promocion" value="Mis promociones">
+            <input type="button" id="b_mis_delivery" name="b_mis_delivery" value="delivery">
         </div></center>
     </div>
 </div>

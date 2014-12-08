@@ -11,7 +11,7 @@
                     text: "Ok",
                     click: function() {
                         str=$("#frm_login").serialize();
-                        $.post('index/login',str, function(data) {
+                        $.post(base_url+'index/login',str, function(data) {
                             var pedaso=data.split("-");
                             correc=pedaso[0];
                             tipou=pedaso[1];
@@ -19,9 +19,9 @@
                             $("#error_login").html('datos incorrectos');
                             }else{
                                 if(tipou=='1'){
-                                    window.location='cliente/';
+                                    window.location=base_url+'cliente/';
                                 }else{
-                                    window.location='empresa/';  
+                                    window.location=base_url+'empresa/';  
                                 }
                             }
                         });

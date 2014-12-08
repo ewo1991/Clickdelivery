@@ -22,6 +22,7 @@ $(function(){
                         idrestaurante=$('#idrestaurant').val();
                         $('#idresta').attr('value',idrestaurante);
                         total_final=total_final+total;
+                        $("#b_compra_delivery").css("display","");
                         $('#totat_final').html(total_final);
                         $('#antes').before(
                             '<tr>\n\
@@ -96,13 +97,13 @@ $(function(){
                         sery_dely=$('#form_carrito').serialize();
                         $.post(base_url+'delivery/empesar_envio',sery_dely+'&cordenadas='+coordenadas+'&numero_casa='+numero_casa,function(data){
        })
-//                        window.location=base_url+'index';
+                        window.location=base_url+'index';
                     }
                 },
                 {
                     text: "Cancel",
                     click: function() {
-//                        window.location=base_url+'index';
+                        window.location=base_url+'index';
                     }
                 }
             ],

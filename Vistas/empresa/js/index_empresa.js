@@ -9,6 +9,14 @@ $(function(){
            $("#cuerpo_empresa").empty().append(data);
        });
    }) ;
+
+   $("#b_mis_delivery").click(function(){
+      $.post(base_url+'empresa/mis_delivery',function(data){
+           $("#cuerpo_empresa").empty().append(data);
+       });
+   });
+   
+   
    
 });
 

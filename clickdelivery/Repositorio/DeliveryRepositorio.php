@@ -22,7 +22,7 @@ class DeliveryRepositorio {
     
     public function guardar_detalle_delivey($_datos){
         $id_max=$this->select_id_max();
-        $direccion=$_datos['cordenadas'].' numero de casa: '.$_datos['numero_casa'];
+        $direccion=$_datos['cordenadas'].'/ numero de casa: /'.$_datos['numero_casa'];
         foreach ($_datos['id_plat']as $key=>$value){
         $d_delivery=new Detalle_delivery;
         $d_delivery->idDelivery=$id_max;
@@ -40,15 +40,19 @@ class DeliveryRepositorio {
     
     public function eviar_correo($datos){
         $id_max=$this->select_id_max();
-        $datos_correo=  Platos::select("platos.nombre,platos.precio,usuario.email,detalle_delivery.direccion")
+        $datos_correo=  Platos::selectRaw("usuario.email")
                 ->join("detalle_delivery","platos.idPlato","=","detalle_delivery.idPlato")
                 ->join("delivery","detalle_delivery.idDelivery","=","delivery.idDelivery")
                 ->join("restaurante","delivery.idRestaurante","=","restaurante.idRestaurante")
                 ->join("usuario","restaurante.idUsuario","=","usuario.idUsuario")
                 ->where("restaurante.idRestaurante","=",$datos['idresta'])
                 ->where("delivery.idDelivery","=",$id_max)
-                ->get();
-        print_r($datos_correo);exit;
+                ->get()
+                ->toArray();
+        $para      = $datos_correo[0]['email'];
+        $titulo    = 'Clickdelivery mensaje ';
+        $mensaje   = 'Tiene un delivery. Entre a su cuenta.';
+        mail($para, $titulo, $mensaje);
     }
     
 }

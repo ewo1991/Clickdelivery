@@ -40,6 +40,6 @@
             
         </table>
     </form>
-    <input type="button" id="b_compra_delivery" value="Delivery">
+    <input type="button" id="b_compra_delivery" value="Delivery" style="display: none">
 </div>
 </div>

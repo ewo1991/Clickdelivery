@@ -5,6 +5,12 @@ $(function(){
            $("#cuerpo_empresa").empty().append(data);
        });
    });
+
+   $("#atas_nuevo_plato").click(function(){
+        $.post(base_url+'empresa/plato_empresa',function(data){
+           $("#cuerpo_empresa").empty().append(data);
+       });
+    });
    
    $("#b_subir_foto_plato_act").click(function(){
         $("#dialog_nuevo_plato").dialog("open");
@@ -70,4 +76,5 @@ $(function(){
                     });
             }
     });
+
 });
