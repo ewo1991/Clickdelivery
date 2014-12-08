@@ -67,6 +67,11 @@ class empresaControlador extends Controlador
         $this->_vista->rendePartial('detalle_delivery');
     }
     
+    public function actualezar_delivery(){
+        $this->empreRepo=new EmpresaRepositorio();
+        $this->empreRepo->actualizar_delivery($_REQUEST['id_delivery']);
+    }
+    
     public function eliiminar_plato(){
         $this->empreRepo=new EmpresaRepositorio();
         $this->empreRepo->eliminar($_REQUEST['idplato']);

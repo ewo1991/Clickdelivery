@@ -17,4 +17,10 @@ $(function(){
            $("#detalle_delivery_div").empty().append(data);
        });
     });
+    
+    $('#entregado').click(function(){
+        id_act_delivery=$(this).attr('id_act_delivery');
+        $.post(base_url+'empresa/actualezar_delivery','&id_delivery='+id_act_delivery,function(data){
+       });
+    });
 });

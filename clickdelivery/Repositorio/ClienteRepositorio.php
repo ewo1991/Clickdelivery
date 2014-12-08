@@ -16,4 +16,16 @@ class ClienteRepositorio {
         $index->nombre_empresa=$foto;
         $index->save();
     }
+    
+    public function datos_pedidos(){
+        $datos_peditos=  Capsule::table('delivery')->selectRaw('delivery.idDelivery,delivery.estadodelivery,(platos.nombre) as plato,platos.precio,detalle_delivery.cantidad,restaurante.nombre')
+                ->join('detalle_delivery','delivery.idDelivery','=','detalle_delivery.idDelivery')
+                ->join('platos','detalle_delivery.idPlato','=','platos.idPlato')
+                ->join('restaurante','platos.idRestaurante','=','restaurante.idRestaurante')
+                ->where('delivery.idUsuario','=',$_SESSION['idUsuario'])
+                ->get();
+//        print_r($datos_peditos);exit;
+        return $datos_peditos;
+                
+    }
 }

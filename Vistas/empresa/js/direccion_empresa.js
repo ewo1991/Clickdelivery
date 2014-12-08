@@ -3,6 +3,7 @@ $(function(){
         var direcion=$('#direccion').attr('value');
         var caracter=direcion.split('/');
         var cordenadas=caracter[0];
+        $('#numerp_casa').val(caracter[2]);
         var uno=cordenadas.replace('(', '');
         var dos=uno.replace(')', '');
         var dividir=dos.split(',');

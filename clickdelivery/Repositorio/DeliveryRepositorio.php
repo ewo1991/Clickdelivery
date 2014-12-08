@@ -17,6 +17,7 @@ class DeliveryRepositorio {
         $delivery=new Delivery;
         $delivery->idRestaurante=$id_rest;
         $delivery->idUsuario=$usuario;
+        $delivery->estadodelivery='falta';
         $delivery->save();
     }
     

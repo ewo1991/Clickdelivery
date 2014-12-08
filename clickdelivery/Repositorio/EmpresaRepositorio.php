@@ -5,6 +5,7 @@ session_start();
 use Illuminate\Database\Capsule\Manager as Capsule;
 use clickdelivery\Entidades\Restaurante;
 use clickdelivery\Entidades\Platos;
+use clickdelivery\Entidades\Delivery;
 class EmpresaRepositorio {
     
     public function gauardar_empresa($nom,$telef,$direc,$logo=null,$tipores=null){
@@ -27,6 +28,12 @@ class EmpresaRepositorio {
                 ->where('delivery.estadodelivery','=','falta')
                 ->get();
         return $delivery;
+    }
+    
+    public function actualizar_delivery($id_Deli){
+        $curso = Delivery::find($id_Deli);
+        $curso->estadodelivery = "entregado";
+        $curso->save();
     }
     
     public function plato_datos_join($id_delivery){

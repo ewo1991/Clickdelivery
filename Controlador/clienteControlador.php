@@ -24,4 +24,10 @@ class clienteControlador extends Controlador
         $this->clietRepo=new ClienteRepositorio();
         $this->clietRepo->actuli_cliente($_REQUEST['nombre'],$_REQUEST['telefono'],$_REQUEST['direccion'],$_REQUEST['email'],$_REQUEST['contrasena'],$_REQUEST['foto_cliente']);
     }
+    
+    public function mis_pedidos(){
+        $this->clietRepo=new ClienteRepositorio();
+        $this->_vista->datos_pedidos=  $this->clietRepo->datos_pedidos();
+        $this->_vista->rendePartial('mis_pedidos_cliente');
+    }
 } 
