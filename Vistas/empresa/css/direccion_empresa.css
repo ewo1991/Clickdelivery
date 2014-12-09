@@ -4,3 +4,9 @@
   width: 99%;
   border: 3px solid black;
 }
+
+#ver_direccion{
+	background: #4682B4;
+    color: #d7d7d7;
+    border-radius: 10px;
+}

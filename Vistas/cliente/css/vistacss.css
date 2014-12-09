@@ -49,9 +49,10 @@
     height:90%;
 }
 #form_actu_cliente{
-    font-family: verdana;
+    font-family: arial;
     font-weight: bold;
-     position: absolute;
+    position: absolute;
+    font-size: 15px;
      
 
 }
@@ -62,3 +63,4 @@ text-shadow: 0.1em #333;
 
 
 }
+

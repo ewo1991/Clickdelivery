@@ -23,7 +23,7 @@
                 <td><input type="text" name="precio_plato" id="precio_plato" value="<?php echo $this->dato_plato[0]['precio'] ?>"></td>
             </tr>
             <tr>
-                <td>descripcion</td>
+                <td>Descripcion</td>
                 <td><input type="text" name="descr_plato" id="descr_plato" value="<?php echo $this->dato_plato[0]['descripcion'] ?>"></td>
             </tr>
             <tr>

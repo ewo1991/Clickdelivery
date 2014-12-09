@@ -2,9 +2,9 @@
 <table id="t_detalle_delivery" class="display" cellspacing="0" width="100%">
             <thead>
                 <tr>
-                    <th>id Plato</th>
-                    <th>Nombre plato</th>
-                    <th>Preci</th>
+                    <th>Id Plato</th>
+                    <th>Nombre Plato</th>
+                    <th>Precio</th>
                     <th>Cantidad</th>
                     <th>Total</th>
                 </tr>

@@ -1,6 +1,20 @@
 
 #map-canvas{
+
   height: 500px;
   width: 500px;
   border: 3px solid black;
+}
+#detalle_delivery{
+	background: #4682B4;
+    color: #d7d7d7;
+}
+#entregado{
+	background: #4682B4;
+    color: #d7d7d7;
+}
+#ver_direccion{
+	background: #4682B4;
+    color: #d7d7d7;
+    border-radius: 10px;
 }

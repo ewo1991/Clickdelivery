@@ -4,29 +4,41 @@
     width:21%;
     height:270px;
     position: absolute;
-    left: 70px;
+    left: 200px;
     top: 220px;
 }
 #subir_foto_cliente{
+    background: #4682B4;
+    border-radius: 10px;
+    color: #d7d7d7;
     position: absolute;
-    left: 180px;
+    left: 300px;
     top: 500px;
 }
 #tabla_actualizar{
+    background-color: #66CC66;
     border: 2px solid;
-    border-radius: 25px;
-    width:25%;
-    height:270px;
+    border-radius: 15px;
+    width:23%;
+    height:160px;
     position: absolute;
-    left: 700px;
-    top: 220px;
+    left: 800px;
+    top: 250px;
 
 }
 #datos_cliente{
+    font-family: verdana;
+    text-shadow: 0.1em 0.1em #333;
     position: absolute;
     left: 600px;
     top: 120px;
     font-size:14px;
     
 
+}
+#enviar_act_cliente{
+    background: #4682B4;
+    border-radius: 10px;
+    color: #d7d7d7;
+    position: absolute;
 }

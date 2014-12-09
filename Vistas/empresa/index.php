@@ -44,7 +44,7 @@ background: #4682B4;
             
         </div>
         <center><div>
-            <input type="button" id="b_mis_delivery" name="b_mis_delivery" value="delivery" class="button">
+            <input type="button" id="b_mis_delivery" name="b_mis_delivery" value="Delivery" class="button">
         </div></center>
     </div>
 </div>

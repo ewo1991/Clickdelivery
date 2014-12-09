@@ -4,9 +4,9 @@
 <table id="pedidos_cliente" class="display" cellspacing="0" width="100%">
             <thead>
                 <tr>
-                    <th>id delivery</th>
-                    <th>Nombre restaurante</th>
-                    <th>Nombre plato</th>
+                    <th>Id Delivery</th>
+                    <th>Nombre Restaurante</th>
+                    <th>Nombre Plato</th>
                     <th>Pecio</th>
                     <th>Cantidad</th>
                     <th>Total</th>

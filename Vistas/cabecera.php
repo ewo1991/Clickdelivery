@@ -124,7 +124,7 @@
                 echo ' | <a href="#" id="serar" style="color:#ffffff">Salir</a>';
                 }else{?>
             	<a href="#" id="ref_login" >Ingresar</a>&nbsp;|
-              <a href="#" id="#000099" >Registrate</a>
+              <a href="#" id="resgistrate" >Registrate</a>
                 <?php }?>
             </div>
         </div>
