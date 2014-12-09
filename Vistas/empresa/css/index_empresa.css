@@ -1,7 +1,7 @@
 #cuerpo_empresa{
-    background-color: red;
+    background-color: #CCCCFF;
     width: 100%;
-    height: 478px;
+    height: 500px;
 }
 #foto_empresa{
     border: 2px solid;
@@ -9,13 +9,16 @@
     width:21%;
     height:270px;
     position: absolute;
-    left: 70px;
+    left: 40px;
     top: 220px;
 }
 #tema{
     position: absolute;
-    left: 750px;
-    top: 150px; 
+    left: 600px;
+    top: 130px; 
+    text-shadow: 0.1em 0.1em #333;
+    text-align: center;
+    font-family: verdana;
 }
 #mis_datos_empresa{
     border: 2px solid;
@@ -23,11 +26,11 @@
     width:21%;
     height:270px;
     position: absolute;
-    left: 430px;
+    left: 370px;
     top: 220px
 }
 #img_mis_dat_empresa{
-    background-color: blue;
+   
     width:100%;
     height:90%;
 }
@@ -37,11 +40,11 @@
     width:21%;
     height:270px;
     position: absolute;
-    left: 740px;
+    left: 700px;
     top: 220px
 }
 #img_mis_pedi_empresa{
-    background-color: blue;
+    background-image: url('Vistas/index/image/platos.jpg');
     width:100%;
     height:90%;
 }
@@ -51,11 +54,43 @@
     width:21%;
     height:270px;
     position: absolute;
-    left: 1050px;
+    left: 1020px;
     top: 220px
 }
 #img_mis_promocion_empresa{
-    background-color: blue;
+     background-image: url('Vistas/index/image/deli.png');
     width:100%;
     height:90%;
+}
+
+
+    #b_atras{
+background: #4682B4;
+      border-radius: 10px;
+      color: #d7d7d7;
+     
+}
+ #b_nuevo_plato{
+background: #4682B4;
+      border-radius: 10px;
+      color: #d7d7d7;
+     
+      
+}
+
+#mis_plat{
+    position: absolute;
+    left: 600px;
+    top: 130px; 
+    text-shadow: 0.1em 0.1em #333;
+    
+    font-family: verdana;
+}
+#atras_nuevo_plato{
+ background: #4682B4;
+      border-radius: 10px;
+      color: #d7d7d7;
+      position: absolute;
+      left: 100px;
+    top: 90px;
 }

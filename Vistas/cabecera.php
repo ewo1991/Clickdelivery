@@ -104,7 +104,7 @@
         </form>
     </div>
 <div id="cabecera" align="center">
-        	<div id="mensaje"><h1>El delivery de los mejores restaurantes de la ciudad</h1></div>
+        	<div id="mensaje"><h1>EL DELIVERY DE LOS MEJORES RESTAURANTES DE LA CIUDAD</h1></div>
                 <div id="imagen" class="alinear"></div>
             <div id="cepardor"  class="alinear">
             <div id="botones" class="alinear">
@@ -123,8 +123,8 @@
                 echo 'USUARIO: '.$_SESSION['usuario'];
                 echo ' | <a href="#" id="serar" style="color:#ffffff">Salir</a>';
                 }else{?>
-            	<a href="#" id="ref_login" class="inicio">Ingresar</a>&nbsp;|
-              <a href="#" id="registrar" class="inicio">Registrate</a>
+            	<a href="#" id="ref_login" >Ingresar</a>&nbsp;|
+              <a href="#" id="#000099" >Registrate</a>
                 <?php }?>
             </div>
         </div>

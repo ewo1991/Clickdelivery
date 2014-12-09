@@ -1,7 +1,9 @@
 #cabecera{background-image: url('images/fondo.jpg');
 		height:90px}
 a{text-decoration:none}
-#mensaje{color:#FFFFFF}
+#mensaje{color:#330000;
+    font-family: verdana;
+text-shadow: 0.1em #333;}
 #botones{background-color:#CCFFCC;
 		padding:5px 0px 5px 0px}
 .boton{padding:5px 10px 5px 10px}
@@ -14,4 +16,13 @@ a{text-decoration:none}
 .inicio{color:#FFFFFF}
 .mensaje{display: none;
 		background:red;
-		position: absolute;}
+		position: absolute}
+
+#ref_login{
+color:#000099;
+		}
+
+#registrar{
+	color:#000099;
+
+}

@@ -1,17 +1,22 @@
 .aling{
     display: inline-block; 
+     
+    
+    
+    
 }
-#tabla_delivery{
-    width:40%;
-    background-color: red;
-    border: 2px solid;
-    border-radius: 25px;
+
+#tabla_delivery{ 
+    width:30%;
+     
+}
+
+    
 }
 #detalle_delivery_div{
-    width:59%;
+    width:45%;
     float: right;
-    border: 2px solid;
-    border-radius: 25px;
-    background-color: blue; 
+    
+ 
 }
 

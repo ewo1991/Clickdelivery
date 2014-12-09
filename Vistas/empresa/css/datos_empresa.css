@@ -4,25 +4,61 @@
     width:21%;
     height:270px;
     position: absolute;
-    left: 70px;
+    left: 350px;
     top: 220px;
 }
 #subir_foto_empresa{
     position: absolute;
-    left: 180px;
+    left: 450px;
     top: 500px;
+    background: #4682B4;
+    border-radius: 10px;
+    color: #d7d7d7;
+   
 }
 #tabla_actualizar_empresa{
-    border: 2px solid;
-    border-radius: 25px;
-    width:21%;
-    height:270px;
     position: absolute;
-    left: 700px;
-    top: 220px;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 30px;
+    width:23%;
+    height:120px;
+    left: 800px;
+    top: 270px;
+    background-color: #66CC66;
+    font-weight: bold;
+    float: right;
 }
 #datos_empresa{
+    font-family: verdana;
+text-shadow: 0.1em 0.1em #333;
     position: absolute;
     left: 600px;
     top: 120px;
+}
+
+#enviar_act_empresa{
+    background: #4682B4;
+      border-radius: 10px;
+      color: #d7d7d7;
+      position: absolute;
+
+}
+#actualizar_act_empresa{
+    background: #4682B4;
+      border-radius: 10px;
+      color: #d7d7d7;
+      position: absolute;
+      left: 150px;
+    top: 90px;
+}
+
+#atras_act_empresa{
+
+   background: #4682B4;
+      border-radius: 10px;
+      color: #d7d7d7;
+      position: absolute;
+      left: 100px;
+    top: 90px;
 }

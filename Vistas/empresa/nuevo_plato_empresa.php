@@ -5,7 +5,9 @@
         </div>
     </div>
 <div>
+    <div id="subir_foto_emp">
     <input type="button" name="b_subir_foto_plato_act" id="b_subir_foto_plato_act" value="Subir foto plato">
+   </div>
     <form id="form_nuvo_plato">
         <table>
             <tr>
@@ -21,7 +23,7 @@
                 <td><input type="text" name="descripcion_plato" id="descripcion_plato"></td>
             </tr>
             <tr>
-                <td colspan="2"><center><input type="button" name="atas_nuevo_plato" id="atas_nuevo_plato" value="Atras"> <input type="button" name="b_nuevo_plato" id="b_nuevo_plato" value="Guardar"></center></td>
+                <td colspan="2"><center><input type="button" name="atas_nuevo_plato" id="atras_nuevo_plato" value="Atras"> <input type="button" name="b_nuevo_plato" id="nuevo_plato" value="Guardar"></center></td>
             </tr>
         </table>
     </form>
