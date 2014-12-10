@@ -3,16 +3,39 @@
     }
     
 #cuerpo_platos{
-    width:60%;
-    background-color: red;
+    width:50%;
+    background-color: #CC9966;
     border: 2px solid;
-    border-radius: 25px;
+    height:400px; 
     }
     
-#carrito_compra_plato{
-    width:39%;
+
+#b_plato{
+    background: #4682B4;
+    border-radius: 10px;
+    color: #d7d7d7;
+    position: absolute;
     float: right;
+
+
+    
+    
+}
+
+#tablita{
+    background: #99CC66;
+    width:20%;
     border: 2px solid;
-    border-radius: 25px;
-    background-color: blue;            
+    left: 950px;
+    top: 300px; 
+    float: right;
+    position: absolute;
     }
+#b_compra_delivery{
+    background: #4682B4;
+    border-radius: 10px;
+    color: #d7d7d7;
+    float:right;
+}
+
+

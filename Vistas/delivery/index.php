@@ -18,7 +18,7 @@
             <div id="nombre_plato"><?php echo $value['nombre'] ?><input type="hidden" id="nombre_pl<?php echo $value['idPlato'] ?>" value="<?php echo $value['nombre'] ?>"></div>
             <div id="descripcion"><?php echo $value['descripcion'] ?></div>
             <div id="precio"><?php echo $value['precio'] ?><input type="hidden" id="precio_pl<?php echo $value['idPlato'] ?>" value="<?php echo $value['precio'] ?>"></div>
-            <div id="boton_plato"><input type="button" name="b_plato" class="b_plato" id="b_plato" idplato="<?php echo $value['idPlato'] ?>" value="Camprar"></div>
+            <div id="boton_plato"><input type="button" name="b_plato" class="b_plato" id="b_plato" idplato="<?php echo $value['idPlato'] ?>" value="Comprar"></div>
         </div>
     <?php } ?>
 </div>

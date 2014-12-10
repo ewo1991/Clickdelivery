@@ -23,6 +23,7 @@ border-width:3px;
 }
 
 </style>
+<script src="/clickdelivery/Vistas/index/js/index.js" type="text/javascript"></script>
 <div id="restau" width="100%">
 <div>
     <center>
