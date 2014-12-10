@@ -14,7 +14,7 @@
                 <?php foreach ($this->dato_delive as $key=>$value){ ?>
                     <tr>
                         <td><?php echo $value['idDelivery'] ?></td>
-                        <td><center><input type="button" name="detalle_delivery" id="detalle_delivery" value="Detalle" id_delivery="<?php echo $value['idDelivery'] ?>">
+                        <td><center><input type="button" name="detalle_delivery" id="detalle_delivery" class="detalle_delivery_class" value="Detalle" id_delivery="<?php echo $value['idDelivery'] ?>">
                 <input type="button" name="entregado" id="entregado" value="Entregado" id_act_delivery="<?php echo $value['idDelivery'] ?>"></center></td>
                     </tr>
                 <?php } ?>
